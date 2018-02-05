@@ -4,7 +4,12 @@ var D2Engine = function() {
   var devilRecipe = d2DevilRecipe;
   var specialRecipe = d2SpecialRecipe;
 
-  function digCombination(target, list, depth, footprint) {
+  function digCombination(option) {
+    let target = option.targetName;
+    let list = option.baseList;
+    let depth = option.depth;
+    let footprint = option.footprint;
+
     var targetData = d2Devils[target];
     var combinations = {
       name: target,
@@ -90,7 +95,13 @@ var D2Engine = function() {
 
     return Array.prototype.map.call(combinationList, function(combination) {
       return Array.prototype.map.call(combination, function(nextTarget) {
-        return digCombination(nextTarget, list, depth - 1, footprint.concat(target));
+        let option = {
+          targetName: nextTarget,
+          baseList: list,
+          depth: depth - 1,
+          footprint: footprint.concat(target)
+        };
+        return digCombination(option);
       });
     });
   }

@@ -3,11 +3,14 @@ function summon() {
   var getValue = function(element) {
     return element.value;
   };
-  target = getValue(document.getElementById('target'));
-  baseList = Array.prototype.map.call(document.getElementsByName('base'), getValue);
-  depth = getValue(document.getElementById('depth'));
 
-  combinationTree = engine.searchCombinationTree(target, baseList, depth);
+  let option = {
+    targetName: getValue(document.getElementById('target')),
+    baseList: Array.prototype.map.call(document.getElementsByName('base'), getValue),
+    depth: getValue(document.getElementById('depth'))
+  };
+
+  combinationTree = engine.searchCombinationTree(option);
   combinationTree.sortTree();
 
   let resultDiv = document.getElementById('summon-result');
