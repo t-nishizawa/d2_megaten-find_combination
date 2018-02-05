@@ -1,0 +1,32 @@
+#controller {
+  display: inline-block;
+  vertical-align: top;
+}
+
+#base-input-template button {
+  display: none;
+}
+
+#summon-result {
+  display: inline-block;
+}
+
+#summon-result .subject .name {
+  margin-right: 1em;
+}
+
+#summon-result li > ul {
+  display: none;
+}
+
+#summon-result li.active > ul {
+  display: block;
+}
+
+#summon-result .complete {
+  color: #f00;
+}
+
+#summon-result .end {
+  color: #ccc;
+}
