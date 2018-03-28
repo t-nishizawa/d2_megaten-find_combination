@@ -1,4 +1,11 @@
 window.d2Devils = {
+  "アティス": { "rare": 4, "grade": 65, "group": "狂神" },
+  "ガルーダ": { "rare": 5, "grade": 80, "group": "霊鳥" },
+  "ヤタガラス": { "rare": 4, "grade": 66, "group": "霊鳥" },
+  "ハンサ": { "rare": 2, "grade": 24, "group": "霊鳥" },
+  "スザク": { "rare": 3, "grade": 53, "group": "霊鳥" },
+  "ジャターユ": { "rare": 3, "grade": 44, "group": "霊鳥" },
+  "スパルナ": { "rare": 2, "grade": 28, "group": "霊鳥" },
   "ジークフリード": { "rare": 5, "grade": 83, "group": "英雄" },
   "ヨシツネ": { "rare": 5, "grade": 97, "group": "英雄" },
   "かみおとこ": { "rare": 2, "grade": 25, "group": "怪異" },
